@@ -37,12 +37,9 @@ public class MainActivity extends AppCompatActivity {
         login_btn.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
-//                if(login_username.length()==0){
-//                    Toast.makeText(MainActivity.this, "username이라도 써줘여...", Toast.LENGTH_SHORT).show();
-//                }else{
+
                     Intent intent= new Intent(MainActivity.this,MainpageActivity.class);
                     startActivity(intent);
-//                }
 
             }
         });

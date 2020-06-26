@@ -1,0 +1,96 @@
+<?xml version="1.0" encoding="utf-8"?>
+
+    <androidx.drawerlayout.widget.DrawerLayout
+        xmlns:android="http://schemas.android.com/apk/res/android"
+        xmlns:app="http://schemas.android.com/apk/res-auto"
+        xmlns:tools="http://schemas.android.com/tools"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:id="@+id/drawerLayout"
+        android:fitsSystemWindows="true"
+    >
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:orientation="vertical"
+        >
+
+        <androidx.appcompat.widget.Toolbar
+            android:id="@+id/main_toolbar"
+            android:layout_width="match_parent"
+            android:layout_height="?attr/actionBarSize"
+            android:background="@drawable/login_background"
+            android:elevation="4dp"
+            app:popupTheme="@style/ThemeOverlay.AppCompat.Light"
+            app:theme="@style/Theme.AppCompat.Light.NoActionBar"
+            >
+        </androidx.appcompat.widget.Toolbar>
+
+        <com.google.android.material.tabs.TabLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            app:tabGravity="fill"
+            android:id="@+id/layout_tab"
+            app:tabMode="fixed"
+            app:tabTextColor="#000000"
+            app:tabTextAppearance="@style/tab_text"
+
+            app:tabSelectedTextColor="@color/colorPrimary"
+            app:tabIndicatorColor="@color/colorPrimary"/>
+
+
+
+        <androidx.viewpager2.widget.ViewPager2
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:id="@+id/view_pager">
+
+        </androidx.viewpager2.widget.ViewPager2>
+
+
+    </LinearLayout>
+
+
+    <FrameLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent">
+       <LinearLayout
+           android:layout_width="wrap_content"
+           android:layout_height="wrap_content"
+           android:layout_gravity="bottom|right"
+           >
+           <ImageButton
+               android:background="@drawable/addpost_circle_button"
+               android:layout_width="wrap_content"
+               android:layout_height="wrap_content"
+               android:layout_gravity="bottom|right"
+               android:id="@+id/addbtn"
+               android:src="@drawable/ic_add_white_50dp"
+
+               android:layout_marginBottom="20dp"
+               android:layout_marginRight="20dp"
+               >
+
+           </ImageButton>
+       </LinearLayout>
+
+
+
+    </FrameLayout>
+        <com.google.android.material.navigation.NavigationView
+            android:id="@+id/drawer"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:layout_gravity="start"
+            app:headerLayout="@layout/drawer_header"
+            app:menu="@menu/drawer_menu"
+            app:itemTextAppearance="@style/menuView"
+            />
+
+
+
+
+</androidx.drawerlayout.widget.DrawerLayout>
+
+
+
